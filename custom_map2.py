@@ -111,28 +111,14 @@ def getGtBoxes(file_path):
     return Gt_boxes
 
 
-
-
 # main
-# # tc_42
-gt_json_42 = "/media/user/data/mmdet_checkpoints/work_dirs/tc_42/tiny_no_freez_tc_42_extends_tc_41_d001_p10/ground_truths_coco.json"
-pred_json_42 = "/media/user/data/mmdet_checkpoints/work_dirs/tc_42/tiny_no_freez_tc_42_extends_tc_41_d001_p10/detections_coco.json"
 
-# tc_41
-gt_json_41 = "/media/user/data/mmdet_checkpoints/work_dirs/yolox_tiny_tc_extended_from_max_epoch_5000/tiny_no_freeze_mmdet_tc_41_earlystopping_d001_p10/ground_truths_coco.json"
-pred_json_41 = "/media/user/data/mmdet_checkpoints/work_dirs/yolox_tiny_tc_extended_from_max_epoch_5000/tiny_no_freeze_mmdet_tc_41_earlystopping_d001_p10/detections_coco.json"
-
-# # tc_43 
-gt_json_43 = "/media/user/data/mmdet_checkpoints/work_dirs/tc_43/tc_43/ground_truths_coco.json"
-pred_json_43 = "/media/user/data/mmdet_checkpoints/work_dirs/tc_43/tc_43/detections_coco.json"
-
-## custom
 gt_json_custom = "gt.json"
 pred_json_custom = "pred.json"
 
 
-prediction_boxes = getPredBoxes(pred_json_41)
-groundtruth_boxes = getGtBoxes(gt_json_41)
+prediction_boxes = getPredBoxes(pred_json_custom)
+groundtruth_boxes = getGtBoxes(gt_json_custom)
 
 
 print (mean_average_precision(prediction_boxes, groundtruth_boxes, 0.75))
