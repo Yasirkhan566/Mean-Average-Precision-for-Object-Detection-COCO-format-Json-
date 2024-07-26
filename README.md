@@ -9,3 +9,6 @@ Calculate mean average precision of object detection model manually. Instead of 
 </ul>
 
 <h3>I have uploaded the sample ground_truth file and prediction file</h3>
+
+<h4>Thresholds For mAP</h4>
+<p>This code computes the mAP at single threshold. You can change the value of threshold to compute mAP at multiple thresholds. Or you can modify the logic by providing a list of thresholds and looping all code for each threshold and at end you can take aveerage of all APs</p>
